@@ -109,6 +109,9 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.4
+      '@tanstack/query-devtools':
+        specifier: workspace:*
+        version: link:../query-devtools
       '@types/node':
         specifier: ^20
         version: 20.17.31
