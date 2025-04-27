@@ -1,5 +1,5 @@
 import { render } from 'solid-js/web'
-import { createSignal, lazy } from 'solid-js'
+import { createSignal } from 'solid-js'
 import { setupStyleSheet } from './utils'
 import type {
   QueryClient,
@@ -13,6 +13,7 @@ import type {
   QueryDevtoolsProps,
 } from './contexts'
 import type { Signal } from 'solid-js'
+import DevtoolsComponent from './DevtoolsComponent'
 
 export interface TanstackQueryDevtoolsConfig extends QueryDevtoolsProps {
   styleNonce?: string
@@ -94,7 +95,7 @@ class TanstackQueryDevtools {
       if (this.#Component) {
         Devtools = this.#Component
       } else {
-        Devtools = lazy(() => import('./DevtoolsComponent'))
+        Devtools = DevtoolsComponent
         this.#Component = Devtools
       }
 
