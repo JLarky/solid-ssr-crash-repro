@@ -1,5 +1,5 @@
 import Image from "next/image";
-import "./repro1";
+import "./repro2";
 
 export default function Home() {
   return (
