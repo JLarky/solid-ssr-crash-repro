@@ -6,6 +6,7 @@
     "packages/*"
   ],
   "scripts": {
+    "dev:next-app": "pnpm --filter ./packages/next-app dev",
     "clean": "node scripts/clean.mjs",
     "codegen": "pnpm --recursive --parallel run codegen",
     "build": "tsc -b tsconfig.build.json && pnpm --recursive --parallel run build",
